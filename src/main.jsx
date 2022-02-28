@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react'
 import { Provider } from 'react-redux'
+import {ColorModeSwitch} from './components/ColorModeSwitch'
 import './index.css'
-import App from './App'
+import Router from './routes'
 import theme from './styles/theme'
 import {store} from './store'
 
@@ -12,7 +13,8 @@ ReactDOM.render(
     <ChakraProvider theme={theme}>
       <ColorModeScript />
       <Provider store={store}>
-        <App />
+        <ColorModeSwitch />      
+        <Router />
       </Provider>
     </ChakraProvider>
   </React.StrictMode>,
